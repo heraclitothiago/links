@@ -41,12 +41,6 @@ export default function Home() {
           icon={FaTelegram}
         ></Links>
 
-        <Links
-          url={'https://t.me/heraclitothiago'}
-          site={'Localização'}
-          icon={SlLocationPin}
-        ></Links>
-
       </div>
     </main>
   )
