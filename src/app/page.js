@@ -8,7 +8,9 @@ export default function Home() {
       
       <main className="flex flex-col justify-center h-screen bg-gradient-to-br from-indigo-500 via-gray-500 to-green-500">
         <div className="flex items-center justify-center mb-2">
-          <Image src="https://avatars.githubusercontent.com/u/34630331" alt="advogado"
+          <Image
+          width={350} height={350}
+          src="https://avatars.githubusercontent.com/u/34630331" alt="advogado"
             className="rounded-full size-32 mb-2 border-4 border-green-400 cursor-pointer"></Image>
         </div>
         <h2 className="semi-bold text-white mb-3 text-center">Heráclito Thiago | Advogado</h2>
