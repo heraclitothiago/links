@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^14.0.4",
     "flowbite": "^2.2.1",
     "next": "14.0.4",
     "react": "^18",
