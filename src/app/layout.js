@@ -22,7 +22,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <Head>
-        <title>Heráclito Thiago | Advogado</title>
         <Script id='analytics' strategy='beforeInteractive' async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG_ID}`}></Script>
         <Script id='gtag'>{`
           <script>
