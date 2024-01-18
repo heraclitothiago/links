@@ -21,8 +21,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <Script id='analytics' strategy='beforeInteractive' async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG_ID}`}></Script>
-      <Script id='gtag'>{`
+      <Head>
+        <Script id='analytics' strategy='beforeInteractive' async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG_ID}`}></Script>
+        <Script id='gtag'>{`
           <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
           
             gtag('config', '${process.env.GTAG_ID}');
         `}</Script>
+      </Head>
       <body className={inter.className}>{children}</body>
     </html>
   )
