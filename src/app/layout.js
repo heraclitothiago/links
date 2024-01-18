@@ -23,9 +23,8 @@ export default function RootLayout({ children }) {
     <html lang="pt-br">
       <Head>
         <title>Heráclito Thiago | Advogado</title>
-      </Head>
-      <Script id='analytics' strategy='beforeInteractive' async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG_ID}`}></Script>
-      <Script id='gtag'>{`
+        <Script id='analytics' strategy='beforeInteractive' async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG_ID}`}></Script>
+        <Script id='gtag'>{`
           <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -33,6 +32,7 @@ export default function RootLayout({ children }) {
           
             gtag('config', '${process.env.GTAG_ID}');
         `}</Script>
+      </Head>
       <body className={inter.className}>{children}</body>
     </html>
   )

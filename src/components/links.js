@@ -1,5 +1,4 @@
 import React from 'react'
-import { TbFaceIdError } from "react-icons/tb";
 
 export default function Links({ site, url, icon: Icon }) {
     return (
@@ -9,7 +8,7 @@ export default function Links({ site, url, icon: Icon }) {
         hover:bg-white hover:text-black hover:transition hover:duration-500 ease-in-out'
             href={url || "#"} target='_blank'
             rel='noopener noreferrer'>
-            {Icon ? <Icon /> : <TbFaceIdError />}
+            {Icon ? <Icon /> : ""}
             {site || "site"}
         </a>
     )
