@@ -1,9 +1,16 @@
 import { FaWhatsapp, FaInstagram, FaTiktok, FaTelegram, FaFacebook, FaYoutube } from "react-icons/fa";
-import Links from '@/components/links'
+import AdsLinks from "@/components/AdsLinks";
 import Image from 'next/image'
 import SocialLinks from "@/components/SocialLinks";
+import getLinks from "@/api/GetLinks";
+import ShortUniqueId from 'short-unique-id';
+import { Suspense } from "react";
+import Loading from "@/components/Loading";
 
-export default function Home() {
+export default async function Home() {
+  const anuncios = await getLinks()
+  const uid = new ShortUniqueId();
+
   const medias = {
     socials: [
       { icon: FaWhatsapp, url: process.env.URL_WHATSAPP },
@@ -24,17 +31,12 @@ export default function Home() {
         </div>
         <h2 className="semi-bold text-white mb-3 text-center">Heráclito Thiago | Advogado</h2>
         <div className="pb-2 flex flex-col items-center justify-center">
-          <Links
-            // url={process.env.URL_INSTAGRAM}
-            site={'Indenização para trabalhador contratado de prefeitura após demissão'}
-          // icon={FaInstagram}
-          ></Links>
-
-          <Links
-            // url={process.env.URL_FACEBOOK}
-            site={'Empréstimos consignados indevidos, restituição dobrada!'}
-          // icon={FaFacebook}
-          ></Links>
+          {/* <Suspense fallback={<Loading />} /> */}
+          {
+            anuncios.map(({ description, url }) => (
+              <AdsLinks key={uid} url={url} description={description} />
+            ))
+          }
 
           <div className="flex flex-row justify-evenly justify-center w-9/12 mb-2 py-1.5
           bg-transparent text-white font-semibold text-xl">
