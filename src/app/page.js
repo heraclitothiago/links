@@ -4,8 +4,6 @@ import Image from 'next/image'
 import SocialLinks from "@/components/SocialLinks";
 import getLinks from "@/api/GetLinks";
 import ShortUniqueId from 'short-unique-id';
-import { Suspense } from "react";
-import Loading from "@/components/Loading";
 
 export default async function Home() {
   const anuncios = await getLinks()
@@ -31,7 +29,7 @@ export default async function Home() {
         </div>
         <h2 className="semi-bold text-white mb-3 text-center">Heráclito Thiago | Advogado</h2>
         <div className="pb-2 flex flex-col items-center justify-center">
-          {/* <Suspense fallback={<Loading />} /> */}
+
           {
             anuncios.map(({ description, url }) => (
               <AdsLinks key={uid} url={url} description={description} />
