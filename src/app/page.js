@@ -1,4 +1,5 @@
 import { FaWhatsapp, FaInstagram, FaTiktok, FaTelegram, FaFacebook, FaYoutube } from "react-icons/fa";
+import { SiGooglecalendar } from "react-icons/si";
 import AdsLinks from "@/components/AdsLinks";
 import Image from 'next/image'
 import SocialLinks from "@/components/SocialLinks";
@@ -29,6 +30,10 @@ export default async function Home() {
         </div>
         <h2 className="semi-bold text-white mb-3 text-center">Heráclito Thiago | Advogado</h2>
         <div className="pb-2 flex flex-col items-center justify-center">
+
+          <AdsLinks url={process.env.URL_AGENDAMENTO}
+          description={"Agente um honário conosco"} 
+          icon={SiGooglecalendar }/>
 
           {
             anuncios.map(({ description, url }) => (
