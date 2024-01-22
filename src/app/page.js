@@ -31,7 +31,7 @@ export default async function Home() {
 
           {
             anuncios.map(({ description, url }) => (
-              <AdsLinks key={uid} url={url} description={description} />
+              <AdsLinks key={uid.rnd()} url={url} description={description} />
             ))
           }
 
@@ -41,7 +41,7 @@ export default async function Home() {
               socials
                 .filter(({ isActive }) => isActive === "true")
                 .map(({ link, icon }) => (
-                  <SocialLinks link={link} icon={icon} key={uid} />
+                  <SocialLinks link={link} icon={icon} key={uid.rnd()} />
                 ))
             }
 
