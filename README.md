@@ -9,7 +9,7 @@ Bem-vindo ao AdvLinks, seu hub personalizado de links! Este projeto foi desenvol
 
 ## Demonstração
 
-[Inclua imagens, gifs ou links para uma demonstração do seu projeto.]
+![Banner](https://media.githubusercontent.com/media/heraclitothiago/links/main/images/banner.png){width=450px}
 
 ## Conteúdo
 
