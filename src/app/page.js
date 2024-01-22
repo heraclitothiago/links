@@ -1,4 +1,3 @@
-import { FaWhatsapp, FaInstagram, FaTiktok, FaTelegram, FaFacebook, FaYoutube } from "react-icons/fa";
 import { SiGooglecalendar } from "react-icons/si";
 import AdsLinks from "@/components/AdsLinks";
 import Image from 'next/image'
@@ -7,18 +6,13 @@ import getLinks from "@/api/GetLinks";
 import ShortUniqueId from 'short-unique-id';
 
 export default async function Home() {
-  const anuncios = await getLinks()
+  const data = await getLinks()
+  var [anuncios, socials] = data
+  var { anuncios } = anuncios
+  var { socials } = socials
+
   const uid = new ShortUniqueId();
 
-  const medias = {
-    socials: [
-      { icon: FaWhatsapp, url: process.env.URL_WHATSAPP },
-      { icon: FaTiktok, url: process.env.URL_TIKTOK },
-      { icon: FaFacebook, url: process.env.URL_FACEBOOK },
-      { icon: FaInstagram, url: process.env.URL_INSTAGRAM },
-      { icon: FaTelegram, url: process.env.URL_TELEGRAM },
-    ]
-  }
   return (
     <>
       <main className="flex flex-col justify-center h-screen bg-gradient-to-br from-indigo-500 via-gray-500 to-green-500">
@@ -32,8 +26,8 @@ export default async function Home() {
         <div className="pb-2 flex flex-col items-center justify-center">
 
           <AdsLinks url={process.env.URL_AGENDAMENTO}
-          description={"Agente um honário conosco"} 
-          icon={SiGooglecalendar }/>
+            description={"Agente um honário conosco"}
+            icon={SiGooglecalendar} />
 
           {
             anuncios.map(({ description, url }) => (
@@ -43,7 +37,14 @@ export default async function Home() {
 
           <div className="flex flex-row justify-evenly justify-center w-9/12 mb-2 py-1.5
           bg-transparent text-white font-semibold text-xl">
-            <SocialLinks elements={medias} />
+            {
+              socials
+                .filter(({ isActive }) => isActive === "true")
+                .map(({ link, icon }) => (
+                  <SocialLinks link={link} icon={icon} key={uid} />
+                ))
+            }
+
           </div>
         </div>
       </main>
