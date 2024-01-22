@@ -82,7 +82,7 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 **Sobre Mim:**
 
-Olá, eu sou [Seu Nome], um advogado com mais de uma década de experiência, atuando na área desde 2013. Apaixonado por tecnologia, sou autodidata e estou buscando migrar para uma carreira como programador. Tenho experiência como fullstack developer, trabalhando principalmente com PHP e JavaScript.
+Olá, eu sou Heráclito Thiago, um advogado com mais de uma década de experiência, atuando na área desde 2013. Apaixonado por tecnologia, sou autodidata e estou buscando migrar para carreira como programador. Tenho experiência como fullstack developer, trabalhando principalmente com PHP e JavaScript.
 
 Ao longo da minha jornada, adquiri conhecimento em diversos frameworks, incluindo Laravel, CodeIgniter, CakePHP, Next.js e Express.js. Acredito na importância da versatilidade e da constante aprendizagem para se manter atualizado no mundo da programação.
 
