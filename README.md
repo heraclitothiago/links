@@ -98,9 +98,10 @@ Atualmente, estou cursando Ciência da Computação no IFMA, com previsão de co
 **Habilidades Técnicas:**
 - Fullstack Developer: PHP e JavaScript
 - Frameworks: Laravel, CodeIgniter, CakePHP, Next.js, Express.js, entre outros.
+- CSS e frameworks (bootstrap, tailwind, etc...)
 
 **Educação:**
-- Atualmente cursando Ciência da Computação no IFMA, com previsão de conclusão em 2027.
+- Atualmente cursando Ciência da Computação no IFMA, com previsão de conclusão em 2026.
 
 Estou animado com as possibilidades que a tecnologia oferece e ansioso para contribuir de maneira significativa para projetos desafiadores.
 
