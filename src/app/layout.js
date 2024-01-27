@@ -7,7 +7,7 @@ import { getConfigs } from '@/api/GetLinks';
 const inter = Inter({ subsets: ['latin'] })
 
 const configuration = await getConfigs()
-const [{ title, linkImage, description }] = configuration
+const [{ title, linkImage, description, author }] = configuration
 
 export const metadata = {
   metadataBase: new URL('http://localhost:3000'),
@@ -15,7 +15,7 @@ export const metadata = {
   description: description,
   openGraph: {
     images: linkImage,
-    authors: "Heráclito Thiago"
+    authors: author
   },
   twitter: {
     images: linkImage,
