@@ -1,4 +1,3 @@
-import { SiGooglecalendar } from "react-icons/si";
 import AdsLinks from "@/components/AdsLinks";
 import Image from 'next/image'
 import SocialLinks from "@/components/SocialLinks";
@@ -6,9 +5,8 @@ import getLinks from "@/api/GetLinks";
 import ShortUniqueId from 'short-unique-id';
 
 export default async function Home() {
-  const data = await getLinks()
-  const [{ anuncios }, { socials }] = data
-
+  const [{ anuncios }, { socials }, { configuracao }] = await getLinks()
+  const [{ title, linkImage, _ }] = configuracao
 
   const uid = new ShortUniqueId();
 
@@ -18,10 +16,10 @@ export default async function Home() {
         <div className="flex items-center justify-center mb-2">
           <Image
             width={350} height={350}
-            src={process.env.PUBLIC_USER_PICTURE_SRC} alt="advogado"
+            src={linkImage} alt="advogado"
             className="rounded-full size-32 mb-2 border-4 border-green-400 cursor-pointer"></Image>
         </div>
-        <h2 className="semi-bold text-white mb-3 text-center">Heráclito Thiago | Advogado</h2>
+        <h2 className="semi-bold text-white mb-3 text-center">{title}</h2>
         <div className="pb-2 flex flex-col items-center justify-center">
 
           {

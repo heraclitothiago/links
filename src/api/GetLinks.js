@@ -3,8 +3,7 @@ export default async function getLinks() {
 
     if (!res.ok) {
         return {
-            description: "Erro ao recuperar os anúncios, contate-me no link do whatsapp abaixo",
-            url: process.env.URL_WHATSAPP
+            description: "Erro ao recuperar dados da api",
         }
     }
 
