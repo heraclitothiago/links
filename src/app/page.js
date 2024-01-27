@@ -16,7 +16,7 @@ export default async function Home() {
         <div className="flex items-center justify-center mb-2">
           <Image
             width={350} height={350}
-            src={linkImage} alt="advogado"
+            src={linkImage} alt="advogado" priority={true}
             className="rounded-full size-32 mb-2 border-4 border-green-400 cursor-pointer"></Image>
         </div>
         <h2 className="semi-bold text-white mb-3 text-center">{title}</h2>

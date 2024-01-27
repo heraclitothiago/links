@@ -2,19 +2,23 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { getConfigs } from '@/api/GetLinks';
 
 const inter = Inter({ subsets: ['latin'] })
 
+const configuration = await getConfigs()
+const [{ title, linkImage, description }] = configuration
+
 export const metadata = {
   metadataBase: new URL('http://localhost:3000'),
-  title: 'Heráclito Thiago | Advogado',
-  description: 'Quer saber mais sobre essas ações? Entre em contato comigo pelos links abaixo',
+  title: title,
+  description: description,
   openGraph: {
-    images: [process.env.PUBLIC_USER_PICTURE_SRC],
+    images: linkImage,
     authors: "Heráclito Thiago"
   },
   twitter: {
-    images: [process.env.PUBLIC_USER_PICTURE_SRC],
+    images: linkImage,
   }
 }
 
