@@ -7,9 +7,8 @@ import ShortUniqueId from 'short-unique-id';
 
 export default async function Home() {
   const data = await getLinks()
-  var [anuncios, socials] = data
-  var { anuncios } = anuncios
-  var { socials } = socials
+  const [{ anuncios }, { socials }] = data
+
 
   const uid = new ShortUniqueId();
 
