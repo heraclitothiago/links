@@ -9,18 +9,18 @@ Bem-vindo ao AdvLinks, seu hub personalizado de links! Este projeto foi desenvol
 
 ## Demonstração
 
-![Banner](https://media.githubusercontent.com/media/heraclitothiago/links/main/images/banner.png){width=450px}
+![Banner](https://media.githubusercontent.com/media/heraclitothiago/links/main/images/banner.png)
 
 ## Conteúdo
 
-- [AdvLinks - Seu Hub de Links Pessoal](#advlinks---seu-hub-de-links-pessoal)
+  - [AdvLinks - Seu Hub de Links Pessoal](#advlinks---seu-hub-de-links-pessoal)
   - [Descrição do Projeto](#descrição-do-projeto)
   - [Demonstração](#demonstração)
   - [Conteúdo](#conteúdo)
   - [Tecnologias Utilizadas](#tecnologias-utilizadas)
   - [Instalação](#instalação)
   - [Como Usar](#como-usar)
-    - [Configurando sua Página de Links](#configurando-sua-página-de-links)
+  - [Configurando sua Página de Links](#configurando-sua-página-de-links)
   - [Contribuição](#contribuição)
   - [Licença](#licença)
 
@@ -32,8 +32,8 @@ Bem-vindo ao AdvLinks, seu hub personalizado de links! Este projeto foi desenvol
 
 ## Instalação
 
-1. Clone o repositório: `git clone https://github.com/seu-usuario/AdvLinks.git`
-2. Navegue até o diretório: `cd AdvLinks`
+1. Clone o repositório: `git clone https://github.com/heraclitothiago/links.git`
+2. Navegue até o diretório: `cd links`
 3. Instale as dependências: `npm install`
 
 ## Como Usar
@@ -98,9 +98,10 @@ Atualmente, estou cursando Ciência da Computação no IFMA, com previsão de co
 **Habilidades Técnicas:**
 - Fullstack Developer: PHP e JavaScript
 - Frameworks: Laravel, CodeIgniter, CakePHP, Next.js, Express.js, entre outros.
+- CSS e frameworks (bootstrap, tailwind, etc...)
 
 **Educação:**
-- Atualmente cursando Ciência da Computação no IFMA, com previsão de conclusão em 2027.
+- Atualmente cursando Ciência da Computação no IFMA, com previsão de conclusão em 2026.
 
 Estou animado com as possibilidades que a tecnologia oferece e ansioso para contribuir de maneira significativa para projetos desafiadores.
 

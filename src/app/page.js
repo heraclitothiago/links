@@ -25,10 +25,6 @@ export default async function Home() {
         <h2 className="semi-bold text-white mb-3 text-center">Heráclito Thiago | Advogado</h2>
         <div className="pb-2 flex flex-col items-center justify-center">
 
-          <AdsLinks url={process.env.URL_AGENDAMENTO}
-            description={"Agente um honário conosco"}
-            icon={SiGooglecalendar} />
-
           {
             anuncios.map(({ description, url }) => (
               <AdsLinks key={uid.rnd()} url={url} description={description} />

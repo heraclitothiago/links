@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@next/third-parties": "^14.0.4",
+    "@vercel/analytics": "^1.1.2",
+    "@vercel/speed-insights": "^1.0.7",
     "flowbite": "^2.2.1",
     "next": "14.0.4",
     "react": "^18",
