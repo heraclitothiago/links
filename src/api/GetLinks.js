@@ -1,5 +1,5 @@
 export async function getConfigs() {
-    const res = await fetch(process.env.API_ADDRESS, { next: { revalidate: 60 * 60 * 24 } })
+    const res = await fetch(process.env.API_ADDRESS, { cache: 'force-cache' })
 
     if (!res.ok) {
         return {
@@ -12,7 +12,7 @@ export async function getConfigs() {
 }
 
 export default async function getLinks() {
-    const res = await fetch(process.env.API_ADDRESS, { next: { revalidate: 0 } })
+    const res = await fetch(process.env.API_ADDRESS, { cache: 'force-cache' })
 
     if (!res.ok) {
         return {
