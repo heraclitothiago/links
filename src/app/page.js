@@ -12,7 +12,7 @@ export default async function Home() {
 
   return (
     <>
-      <main className="flex flex-col justify-center h-screen bg-gradient-to-br from-indigo-500 via-gray-500 to-green-500">
+      <main className="flex flex-col justify-center h-screen">
         <div className="flex items-center justify-center mb-2">
           <Image
             width={350} height={350}

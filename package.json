@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/third-parties": "^14.0.4",
+    "@next/third-parties": "^14.1.0",
     "@vercel/analytics": "^1.1.2",
     "@vercel/speed-insights": "^1.0.8",
-    "flowbite": "^2.2.1",
+    "framer-motion": "^11.0.5",
     "next": "^14.1.0",
     "react": "^18",
     "react-dom": "^18",

@@ -1,8 +1,8 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { getConfigs } from '@/api/GetLinks';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -26,12 +26,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>
+      <body className={`bg-gradient-to-br from-indigo-500 via-gray-500 to-green-500 ${inter.className}`}>
         {children}
-        <GoogleAnalytics gaId="G-1974FDGNGK" />
         <Analytics />
         <SpeedInsights />
       </body>
+      <GoogleAnalytics gaId="G-1974FDGNGK" />
     </html>
   )
 }
